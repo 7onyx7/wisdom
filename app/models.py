@@ -17,3 +17,4 @@ class Reminder(Base):
     reminder_time = Column(DateTime, nullable=False) 
     owner_id = Column(Integer, ForeignKey("users.id"), nullable=False) 
     owner = relationship("User", back_populates="reminders")             
+    
